@@ -21,8 +21,8 @@ function tinybot_default_keyboard( $type='default', $one_time=false, $resize=tru
 	//Можно прописать несколько дефолтных клавиатур и через elseif выводить разные наборы кнопок
 	if ( $type=='default') {
 		$rows = array();
-		$rows[] = array('Узнать свой ID');
-		$rows[] = array('Установить статус Busy');	
+		$rows[] = array('Первая кнопка');
+		$rows[] = array('Вторая кнопка');	
 	}	
 
 	$keyboard = array(

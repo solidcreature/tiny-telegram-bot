@@ -1,0 +1,174 @@
+/* Страница опций */
+
+.tinybot-options {
+	
+}
+
+h1.tinybot-options__title {
+	margin: 0 0 0.5em 0;
+}
+
+.tinybot-options___wrap { 
+	display: flex;
+	flex-direction: row;
+	gap: 24px;
+}	
+
+@media (max-width: 640px) {
+	.tinybot-options___wrap { 
+		flex-direction: column;
+	}		
+}
+
+.tinybot-options__block {
+	background: #fff;
+	border: 1px solid #afafaf;
+	border-radius: 3px;
+	padding: 24px;
+	box-sizing: border-box;
+	margin-bottom: 24px;
+}
+
+.tinybot-options__block.is--column {
+	flex-basis: 50%;
+}
+
+@media (max-width: 640px) {
+	.tinybot-options__block.is--column {
+		width: 100%;
+	}	
+}	
+
+.tinybot-options__secondary {
+	background: #f2f2f2;
+	border-radius: 2px;
+	padding: 18px;
+}
+
+.tinybot-options__secondary h4{
+	margin: 0 0 6px 0;	
+}
+
+.tinybot-options__secondary p{
+	margin: 0 0 6px 0;	
+}
+
+.tinybot-options__secondary p:last-child{
+	margin: 0;	
+}	
+
+.tinybot-options__subtitle {
+	margin: 0 0 12px 0;
+	padding: 0;
+}	
+
+.tinybot-options__subtitle.has--underline {
+	padding-bottom: 12px;
+	border-bottom: 1px solid #dcdcde;
+}
+
+.tinybot-options__block form h2 {
+	margin: 0 0 12px 0;
+	padding: 0;	
+	padding-bottom: 12px;
+	border-bottom: 1px solid #dcdcde;	
+}
+
+
+/* Медиа-файлы телеграм-бота */
+
+.tinybot-media {
+
+}
+
+.tinybot-media__item {
+	background: #fff;
+	border-radius: 6px;
+	padding: 12px 120px 12px 12px;
+	margin: 0 0 20px 0;
+	position: relative;
+	
+}
+
+.tinybot-media__item-button {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translatey(-50%);
+}
+
+.tinybot-media__item-uptitle {
+    margin: 0;
+	padding: 0;
+	color: #e6e6e6;
+}  
+
+.tinybot-media__item-title {
+    margin: 0;
+	padding: 0;
+	font-weight: normal;
+}  
+
+.tinybot-media__item-meta {
+    display: flex;
+	list-style: none;
+	margin: 24px 0 0 0;
+	padding: 0;
+	color: #a1a1a1;
+}    
+
+.tinybot-media__item-meta li{
+	padding-right: 24px;	
+}	
+
+
+/* Метабокс участника */
+
+.tgperson-metabox {
+	
+}
+
+
+.tgperson-metabox__inner {
+	display: flex;
+	width: 100%;
+}
+
+.tgperson-metabox__column {
+	flex-grow: 1;	
+	padding: 10px 20px;
+	border-right: 1px solid #e6e6e6;
+}	
+
+.tgperson-metabox__column:first-child {
+	padding-left: 0;	
+}
+
+.tgperson-metabox__column:last-child {
+	border-right: 0;	
+}
+
+.tgperson-metabox__label {
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+}
+
+.tgperson-metabox__column {
+	flex-grow: 1;	
+	padding: 10px 20px;
+	border-right: 1px solid #e6e6e6;
+}	
+
+
+.sendmessage-metabox__inner {
+	flex-grow: 1;	
+	padding: 10px 0px;
+	border-right: 1px solid #e6e6e6;	
+}
+
+.sendmessage-metabox__textarea {
+	width: 100%;
+	min-height: 200px;
+	margin: 0 0 10px 0;
+} 

@@ -42,6 +42,8 @@ function tinybot_request($method, $data = array()) {
     $raw_out = wp_remote_post( $url, $args );
 	$out = json_decode($raw_out['body']);
 	
+	do_action('tinybot_last_response_hook', $out);
+	
     return $out; 
 }
 
@@ -52,10 +54,15 @@ function tinybot_get_info() {
 	$out = tinybot_request('getMe');
 	$out = $out -> result;
 	
-	$text = '<b>Информация о боте:</b>' . PHP_EOL;
-	$text .= 'ID: ' . $out -> id . PHP_EOL;
-	$text .= 'Name: ' . $out -> first_name . PHP_EOL;
-	$text .= 'Username: @' . $out -> username . PHP_EOL;
+	$text .= '<p>ID: ' . $out -> id . '</p>';
+	$text .= '<p>Name: ' . $out -> first_name . '</p>';
+	$text .= '<p>Username: <a href="https://t.me/' . $out -> username . '">@' . $out -> username . '</a>' . '</p>';
+	
+	$text .= '<p>Можно добавлять в группы: '  . $out -> can_join_groups . '</p>';
+	$text .= '<p>Имеет доступ ко всем сообщениям: '  . $out -> can_read_all_group_messages . '</p>';
+	$text .= '<p>Поддерживает инлайн-режим: '  . $out -> supports_inline_queries . '</p>';
+	$text .= '<p>[can_connect_to_business]: '  . $out -> can_connect_to_business . '</p>';
+	$text .= '<p>Есть подключенное приложение: '  . $out -> has_main_web_app . '</p>';
 	
 	return($text);
 }
